@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controladores.ConsultaController" stylesheets="@estilo.css">
+
+    <top>
+        <HBox styleClass="barra-superior" alignment="CENTER_LEFT" spacing="10">
+            <padding>
+                <Insets top="10" right="15" bottom="10" left="15"/>
+            </padding>
+            <Label text="Consulta de la red médica" styleClass="titulo"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Volver al inicio" onAction="#volver"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+
+            <Tab text="Hospitales">
+                <content>
+                    <VBox spacing="10">
+                        <padding>
+                            <Insets top="15" right="20" bottom="15" left="20"/>
+                        </padding>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <Label text="Estado"/>
+                            <ComboBox fx:id="cmbEstadoHosp" prefWidth="200"/>
+                            <Label text="Buscar"/>
+                            <TextField fx:id="txtBuscaHosp" promptText="Nombre del hospital" prefWidth="240"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Label fx:id="lblConteoHosp"/>
+                        </HBox>
+                        <TableView fx:id="tablaHosp" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colHNombre" text="Hospital" prefWidth="250"/>
+                                <TableColumn fx:id="colHEstado" text="Estado" prefWidth="150"/>
+                                <TableColumn fx:id="colHDireccion" text="Dirección" prefWidth="300"/>
+                                <TableColumn fx:id="colHTelefono" text="Teléfono" prefWidth="130"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </content>
+            </Tab>
+
+            <Tab text="Médicos">
+                <content>
+                    <VBox spacing="10">
+                        <padding>
+                            <Insets top="15" right="20" bottom="15" left="20"/>
+                        </padding>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <Label text="Estado"/>
+                            <ComboBox fx:id="cmbEstadoMed" prefWidth="180"/>
+                            <Label text="Especialidad"/>
+                            <ComboBox fx:id="cmbEspecialidad" prefWidth="180"/>
+                            <Label text="Buscar"/>
+                            <TextField fx:id="txtBuscaMed" promptText="Nombre del médico" prefWidth="200"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Label fx:id="lblConteoMed"/>
+                        </HBox>
+                        <TableView fx:id="tablaMed" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colMNombre" text="Médico" prefWidth="220"/>
+                                <TableColumn fx:id="colMEspecialidad" text="Especialidades" prefWidth="230"/>
+                                <TableColumn fx:id="colMHospital" text="Hospital" prefWidth="220"/>
+                                <TableColumn fx:id="colMEstado" text="Estado" prefWidth="140"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </content>
+            </Tab>
+
+            <Tab text="Servicios y costos">
+                <content>
+                    <VBox spacing="10">
+                        <padding>
+                            <Insets top="15" right="20" bottom="15" left="20"/>
+                        </padding>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <Label text="Hospital"/>
+                            <ComboBox fx:id="cmbHospitalServ" prefWidth="300"/>
+                        </HBox>
+                        <Label fx:id="lblInfoHosp"/>
+                        <TableView fx:id="tablaServ" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colSNombre" text="Servicio" prefWidth="180"/>
+                                <TableColumn fx:id="colSCaracteristicas" text="Características" prefWidth="420"/>
+                                <TableColumn fx:id="colSCosto" text="Costo" prefWidth="130"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </content>
+            </Tab>
+
+        </TabPane>
+    </center>
+</BorderPane>

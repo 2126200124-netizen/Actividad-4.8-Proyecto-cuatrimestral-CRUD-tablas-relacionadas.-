@@ -1,0 +1,199 @@
+/*
+  Paleta de colores Red Médica
+  Azul oscuro   #15324F  menú lateral y títulos
+  Azul médico   #146C94  botones principales
+  Verde clínico #0F766E  acciones positivas
+  Gris claro    #F5F8FB  fondo general
+  Blanco        #FFFFFF  tablas y formularios
+  Gris oscuro   #1F2937  texto principal
+*/
+
+.root {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 12pt;
+    -fx-background-color: #F5F8FB;
+    -fx-dark-text-color: #1F2937;
+    -fx-accent: #146C94;
+    -fx-focus-color: #146C94;
+    -fx-faint-focus-color: transparent;
+}
+
+
+.fondo-login {
+    -fx-background-color: #F5F8FB;
+    -fx-background-image: url("Registro_de_cuenta.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+
+.tarjeta {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 16;
+    -fx-border-color: #D5DEE8;
+    -fx-border-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(21, 50, 79, 0.18), 14, 0, 0, 4);
+}
+
+
+.titulo {
+    -fx-font-size: 16pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #15324F;
+}
+
+.subtitulo {
+    -fx-font-size: 13pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #15324F;
+}
+
+.mensaje-error {
+    -fx-text-fill: #B42318;
+}
+
+
+.barra-superior {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D5DEE8;
+    -fx-border-width: 0 0 1 0;
+}
+
+.menu-lateral {
+    -fx-background-color: #15324F;
+}
+
+.menu-lateral .button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 8 12 8 12;
+}
+
+.menu-lateral .button:hover {
+    -fx-background-color: #146C94;
+    -fx-text-fill: #FFFFFF;
+}
+
+.menu-lateral .button:pressed {
+    -fx-background-color: #0F5778;
+}
+
+
+.button {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 6;
+    -fx-border-color: #C3CEDA;
+    -fx-border-radius: 6;
+    -fx-text-fill: #1F2937;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #EAF1F7;
+}
+
+.boton-principal,
+.boton-principal:hover,
+.boton-principal:pressed {
+    -fx-background-color: #146C94;
+    -fx-border-color: #146C94;
+    -fx-text-fill: #FFFFFF;
+}
+
+.boton-principal:hover {
+    -fx-background-color: #0F5778;
+}
+
+.boton-positivo,
+.boton-positivo:hover,
+.boton-positivo:pressed {
+    -fx-background-color: #0F766E;
+    -fx-border-color: #0F766E;
+    -fx-text-fill: #FFFFFF;
+}
+
+.boton-positivo:hover {
+    -fx-background-color: #0B5E58;
+}
+
+.boton-texto,
+.boton-texto:hover,
+.boton-texto:pressed {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #146C94;
+    -fx-underline: true;
+}
+
+
+.text-field,
+.password-field {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 6;
+    -fx-border-color: #C3CEDA;
+    -fx-border-radius: 6;
+    -fx-padding: 6 8 6 8;
+}
+
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #146C94;
+}
+
+.combo-box-base {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 6;
+    -fx-border-color: #C3CEDA;
+    -fx-border-radius: 6;
+}
+
+.combo-box-base:focused {
+    -fx-border-color: #146C94;
+}
+
+
+.table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D5DEE8;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #E6EEF5;
+    -fx-border-color: #D5DEE8;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #15324F;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #F5F8FB;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #146C94;
+}
+
+.table-row-cell:filled:selected .table-cell {
+    -fx-text-fill: #FFFFFF;
+}
+
+
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: #E6EEF5;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #FFFFFF;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #146C94;
+    -fx-font-weight: bold;
+}

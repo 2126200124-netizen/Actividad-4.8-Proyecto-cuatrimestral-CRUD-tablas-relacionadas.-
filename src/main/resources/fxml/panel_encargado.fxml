@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controladores.PanelEncargadoController" stylesheets="@estilo.css">
+    <top>
+        <HBox styleClass="barra-superior" alignment="CENTER_LEFT" spacing="10">
+            <padding>
+                <Insets top="10" right="15" bottom="10" left="15"/>
+            </padding>
+            <Label text="Red Médica" styleClass="titulo"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblUsuario"/>
+        </HBox>
+    </top>
+    <left>
+        <VBox styleClass="menu-lateral" spacing="8" prefWidth="180">
+            <padding>
+                <Insets top="15" right="12" bottom="15" left="12"/>
+            </padding>
+            <Button text="Hospitales" onAction="#verHospitales" maxWidth="Infinity"/>
+            <Button text="Médicos" onAction="#verMedicos" maxWidth="Infinity"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button text="Cerrar sesión" onAction="#cerrarSesion" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="contenido"/>
+    </center>
+</BorderPane>

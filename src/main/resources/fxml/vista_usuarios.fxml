@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controladores.Vista_usuariosController"
+      spacing="12" style="-fx-padding: 20;">
+
+    <Label text="Gestión de Usuarios y Perfiles" styleClass="titulo"/>
+
+    <HBox spacing="15" VBox.vgrow="ALWAYS">
+     
+        <TableView fx:id="tblUsuarios" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="45"/>
+                <TableColumn fx:id="colNombre" text="Responsable" prefWidth="150"/>
+                <TableColumn fx:id="colCorreo" text="Correo" prefWidth="160"/>
+                <TableColumn fx:id="colRol" text="Rol" prefWidth="120"/>
+                <TableColumn fx:id="colEstado" text="Estado" prefWidth="110"/>
+                <TableColumn fx:id="colEstatus" text="Estatus" prefWidth="80"/>
+            </columns>
+        </TableView>
+
+        <!-- Panel lateral de edición y baja (Actualizar / Eliminar) -->
+        <VBox styleClass="tarjeta" spacing="8" prefWidth="250" maxHeight="-Infinity">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Label text="Editar Usuario" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+
+            <Label text="Nombre del responsable"/>
+            <TextField fx:id="txtNombre" promptText="Selecciona un usuario"/>
+
+            <Label text="Correo (solo lectura)"/>
+            <TextField fx:id="txtCorreo" editable="false" style="-fx-opacity: 0.75;"/>
+
+            <Label text="Rol"/>
+            <ComboBox fx:id="cmbRol" maxWidth="Infinity"/>
+
+            <Label text="Estado asignado"/>
+            <ComboBox fx:id="cmbEstado" maxWidth="Infinity"/>
+
+            <Label text="Estatus"/>
+            <ComboBox fx:id="cmbEstatus" maxWidth="Infinity"/>
+
+            <Label fx:id="lblMensaje" wrapText="true"/>
+
+            <Button text="Guardar cambios" onAction="#actualizarUsuario"
+                    styleClass="boton-principal" maxWidth="Infinity"/>
+            <Button text="Eliminar usuario" onAction="#eliminarUsuario"
+                    style="-fx-background-color: #B42318; -fx-text-fill: white;" maxWidth="Infinity"/>
+        </VBox>
+    </HBox>
+</VBox>

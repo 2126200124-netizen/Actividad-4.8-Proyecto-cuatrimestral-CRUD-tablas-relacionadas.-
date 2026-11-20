@@ -1,0 +1,18 @@
+[2026-11-20 08:21:36] MÓDULO: Login / Usuarios | OPERACIÓN: Autenticación de usuario | TIPO: SQLException | DETALLE: Error de acceso para usuario admin password=***
+[2026-11-20 08:21:37] MÓDULO: Imágenes (hospitales_test) | OPERACIÓN: Validar Archivo | TIPO: IOException | DETALLE: Archivo inexistente o ilegible: C:\ruta\que\no\existe\foto.jpg
+[2026-11-20 08:21:37] MÓDULO: Imágenes (hospitales_test) | OPERACIÓN: Validar Formato | TIPO: IllegalArgumentException | DETALLE: Extensión no permitida: txt
+[2026-11-20 08:21:37] MÓDULO: Hospitales | OPERACIÓN: Eliminar Hospital | TIPO: IllegalStateException | DETALLE: Relación dependiente activa en tabla medicos
+[2026-11-20 08:21:37] MÓDULO: Hospitales | OPERACIÓN: Registrar Hospital | TIPO: BatchUpdateException | DETALLE: Cannot add or update a child row: a foreign key constraint fails (`red_medica_test`.`hospital_servicios`, CONSTRAINT `hospital_servicios_ibfk_2` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON DELETE CASCADE)
+[2026-11-20 08:21:37] MÓDULO: Hospitales | OPERACIÓN: Registrar Hospital | TIPO: SQLIntegrityConstraintViolationException | DETALLE: Column 'nombre' cannot be null
+[2026-11-20 08:21:37] MÓDULO: Hospitales | OPERACIÓN: Registrar Hospital | TIPO: BatchUpdateException | DETALLE: Cannot add or update a child row: a foreign key constraint fails (`red_medica_test`.`hospital_servicios`, CONSTRAINT `hospital_servicios_ibfk_2` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`) ON DELETE CASCADE)
+[2026-11-20 08:21:37] MÓDULO: Usuarios | OPERACIÓN: Validar Campos Obligatorios | TIPO: IllegalArgumentException | DETALLE: Campos obligatorios inválidos en registro de usuario
+[2026-11-20 08:21:37] MÓDULO: Usuarios | OPERACIÓN: Validar Campos Obligatorios | TIPO: IllegalArgumentException | DETALLE: Campos obligatorios inválidos en registro de usuario
+[2026-11-20 08:21:37] MÓDULO: Usuarios | OPERACIÓN: Validar Campos Obligatorios | TIPO: IllegalArgumentException | DETALLE: Campos obligatorios inválidos en registro de usuario
+[2026-11-20 08:21:37] MÓDULO: Usuarios | OPERACIÓN: Validar Campos Obligatorios | TIPO: IllegalArgumentException | DETALLE: Campos obligatorios inválidos en registro de usuario
+[2026-11-20 08:21:37] MÓDULO: Usuarios | OPERACIÓN: Validar Único Administrador | TIPO: IllegalStateException | DETALLE: Restricción violada: solo se permite un Administrador General
+[2026-11-20 08:21:37] MÓDULO: Usuarios | OPERACIÓN: Registrar Usuario | TIPO: SQLIntegrityConstraintViolationException | DETALLE: Duplicate entry 'encargado@redmedica.com' for key 'correo'
+[2026-11-20 08:21:37] MÓDULO: Usuarios | OPERACIÓN: Actualizar Rol Administrador | TIPO: IllegalStateException | DETALLE: Restricción violada: único Administrador General
+[2026-11-20 08:21:37] MÓDULO: Usuarios | OPERACIÓN: Eliminar usuario ID: 2 | TIPO: SQLIntegrityConstraintViolationException | DETALLE: Cannot delete or update a parent row: a foreign key constraint fails (`red_medica_test`.`validaciones`, CONSTRAINT `fk_val_solicita` FOREIGN KEY (`id_usuario_solicita`) REFERENCES `usuarios` (`id_usuario`))
+[2026-11-20 11:00:48] MÓDULO: Login / Usuarios | OPERACIÓN: Autenticación de usuario | TIPO: CommunicationsException | DETALLE: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.

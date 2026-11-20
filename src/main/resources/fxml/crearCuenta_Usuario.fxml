@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controladores.CrearCuenta_UsuarioController"
+           styleClass="fondo-login" stylesheets="@estilo.css">
+
+    <VBox styleClass="tarjeta" alignment="CENTER" spacing="8"
+          maxWidth="350" maxHeight="-Infinity" prefWidth="350">
+        <padding>
+            <Insets top="20" right="25" bottom="20" left="25"/>
+        </padding>
+
+        <Label text="Crear cuenta" styleClass="titulo"/>
+
+        <Label text="Nombre del responsable"/>
+        <TextField fx:id="txtNombre" promptText="Ana López"/>
+
+        <Label text="Correo"/>
+        <TextField fx:id="txtCorreo" promptText="name@company.com"/>
+
+        <Label text="Contraseña"/>
+        <PasswordField fx:id="txtContrasena" promptText="Mínimo 8 caracteres"/>
+
+        <Label text="Confirmar contraseña"/>
+        <PasswordField fx:id="txtConfirmar" promptText="Repite la contraseña"/>
+
+        <Label text="Perfil de Usuario (Rol)"/>
+        <ComboBox fx:id="cmbRol" promptText="Seleccione el perfil" maxWidth="Infinity"/>
+
+        <Label text="Estado Asignado (Solo Regional)"/>
+        <ComboBox fx:id="cmbEstado" promptText="Seleccione el estado" maxWidth="Infinity"/>
+
+        <Label fx:id="lblMensaje" styleClass="mensaje-error" wrapText="true"/>
+
+        <Button text="Registrarme" onAction="#registrar"
+                styleClass="boton-principal" maxWidth="Infinity"/>
+        <Button text="Volver" onAction="#volver" styleClass="boton-texto"/>
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controladores.VistaValidacionesController" spacing="10">
+    <padding>
+        <Insets top="15" right="20" bottom="15" left="20"/>
+    </padding>
+
+    <Label text="Validaciones" styleClass="titulo"/>
+
+    <TableView fx:id="tabla" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colTipo" text="Tipo" prefWidth="90"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="260"/>
+            <TableColumn fx:id="colDetalle" text="Estado u hospital" prefWidth="200"/>
+            <TableColumn fx:id="colEstado" text="Validación" prefWidth="110"/>
+            <TableColumn fx:id="colObs" text="Observaciones" prefWidth="260"/>
+        </columns>
+    </TableView>
+
+    <TextField fx:id="txtObservaciones" promptText="Observaciones (obligatorias al rechazar)"/>
+    <Label fx:id="lblMensaje" styleClass="mensaje-error" wrapText="true"/>
+    <HBox spacing="10">
+        <Button text="Aprobar" onAction="#aprobar" styleClass="boton-positivo"/>
+        <Button text="Rechazar" onAction="#rechazar"/>
+    </HBox>
+</VBox>
